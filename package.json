@@ -1,0 +1,15 @@
+{
+  "name": "env-auto",
+  "version": "1.0.0",
+  "description": "convert app.json in to .env",
+  "main": "index.js",
+  "scripts": {
+    "start": "./index.js"
+  },
+  "keywords": [
+    "env",
+    "heroku"
+  ],
+  "author": "David Gatti",
+  "license": "MIT"
+}
