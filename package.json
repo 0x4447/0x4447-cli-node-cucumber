@@ -1,8 +1,12 @@
 {
   "name": "env-auto",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "convert app.json in to .env",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidgatti/envAuto"
+  },
   "scripts": {
     "start": "./index.js"
   },
