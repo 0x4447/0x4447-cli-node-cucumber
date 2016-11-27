@@ -2,67 +2,138 @@
 
 let fs = require('fs');
 
+//
+//	Open the app.json file.
+//
 fs.readFile('app.json', 'utf8', function(err, data) {
 
+	//
+	//	1.	Display Error if any
+	//
 	err && console.log(err.message)
 
+	//
+	//	2.	Convert the content of the file in to a JS Object
+	//
 	let parsed = JSON.parse(data).env;
 
+	//
+	//	3.	Create a variable to store the
+	//
 	let line = "";
-	let line_array = "";
 
-	for(key in parsed)
+	//
+	//	4.	Loop over the environment variables and convert them in to a file
+	//
+	for(env_var in parsed)
 	{
-		let ble_array = limit_80_array(parsed[key].description, "", 80);
+		//
+		//	1.	Chop the description in to a specific line length
+		//
+		let comment = limit_80_array(parsed[env_var].description, "", 80);
 
-		line_array += ble_array + "\n" + key + "=\n\n"
+		//
+		//	2.	Combine the comment section with the environment variable
+		//
+		line += comment + "\n" + env_var + "=\n\n"
 	}
-	console.log(line_array.substring(0, line_array.length - 2))
+
+	//
+	//	5.	Remove the last two new line characters
+	//
+	let file = line.substring(0, line.length - 2);
+
+	//
+	//	6.	Save the data in to the .env file.
+	//
+	fs.writeFile('.env', file, (err) => {
+
+		//
+		//	1.	Display Error if any
+		//
+  		err && console.log(err.message)
+
+  		//
+  		//	2.	Let the user know what happened
+  		//
+  		console.log("The file .env was created.");
+
+	});
 
 });
 
+//
+//	The main function that is responsible in chopping the comment to a specific
+//	length.
+//
+//	string 		<-	The string to chop
+//	fragment	<- 	The variable holding the chopped string
+//	length		<-	Line length
+//
+//	Return 	->	Chopped and formated string
+//
 function limit_80_array(string, fragment, length)
 {
+	//
+	//	1.	Split the string in to an array
+	//
 	let array = string.split(" ");
-	let array_copy = array.slice(); // make a copy
 
+	//
+	//	2.	Make a copy of the array. We are going to use this array as a
+	//		container that will hold the words that need to be still proceed
+	//
+	let array_copy = array.slice();
+
+	//
+	//	3.	A temp Array that is going to hold one line of text at each iteration
+	//
 	let tmp = [];
+
+	//
+	//	4.	Variable that helps us track how many character do we have in one
+	//		line already
+	//
 	let size = 0;
 
+	//
+	//	5.	Main loop that append words until they are less then the length
+	//		passed in the function
+	//
 	for(let index in array)
 	{
 		//
-		//	Add the word to our array
+		//	1.	Add the word to our array
 		//
 		tmp.push(array[index])
 
 		//
-		//	Store the size of the word, plus 1 for the extra space
+		//	2.	Store the size of the word, plus 1 for the extra space
 		//
 		size += array[index].length + 1;
 
 		//
-		//	Remove the first element from the array
+		//	3.	Remove the first element from the array
 		//
 		array_copy.shift();
 
 		//
-		//	Check the future
+		//	4.	Check the future
 		//
 		let position = parseInt(index) + 1;
 
 		//
-		//	Make sure the future holds something for us
+		//	5.	Make sure the future holds something for us
 		//
 		if(array[position])
 		{
 			//
-			//	Calculate the future size
+			//	1.	Calculate the future size
 			//
 			let future = size + array[position].length;
 
 			//
-			//	If the future will be to big for us, lets run away
+			//	2.	If the future will be to big for us, lets run away
 			//
 			if(future >= length - 2)
 			{
@@ -72,23 +143,23 @@ function limit_80_array(string, fragment, length)
 	}
 
 	//
-	//	Check if there are some word left in the array
+	//	6.	Check if there are some word left in the array
 	//
 	if(array_copy.length > 0)
 	{
 		//
-		//	Combine what we have
+		//	1.	Combine what we have
 		//
 		fragment += "# " + tmp.join(" ") + "\n";
 
 		//
-		//	Process the left overs again
+		//	2.	Process the left overs again
 		//
 		return limit_80_array(array_copy.join(" "), fragment, length)
 	}
 
 	//
-	//	If nothing left, combine what we have
+	//	7.	If nothing left, combine what we have
 	//
 	fragment += "# " + tmp.join(" ") + "\n";
 
