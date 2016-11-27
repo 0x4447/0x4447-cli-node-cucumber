@@ -1,4 +1,4 @@
-# envAuto
+# Why this code?
 
 This is a very simple and small project create to save me some time when working on web servers hosted on Heroku.
 
@@ -9,3 +9,11 @@ Locally we do use Foreman to load the local environment variables from the `.env
 With this tiny app, if you run it in a folder that has the `app.json` file, it will automatically create a `.env` for you. The only thing that you then need to do, is to set the right data to those variables.
 
 If you find this project useful, don't forget to give it a star :)
+
+## Installation
+
+Install it as a global package, so you can use it through your system.
+
+```bash
+    $ npm install env-auto -g
+```
