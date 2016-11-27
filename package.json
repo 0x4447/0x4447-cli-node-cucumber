@@ -1,6 +1,6 @@
 {
   "name": "env-auto",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "convert app.json in to .env",
   "main": "index.js",
   "repository": {
@@ -12,8 +12,14 @@
   },
   "keywords": [
     "env",
-    "heroku"
+    "heroku",
+    "heroku button",
+    "foreman"
   ],
-  "author": "David Gatti",
+   "author": {
+    "name": "David Gatti",
+    "email": "npm@gatti.pl",
+    "url": "https://github.com/davidgatti"
+  },
   "license": "MIT"
 }
