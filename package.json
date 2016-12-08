@@ -7,8 +7,8 @@
     "type": "git",
     "url": "https://github.com/davidgatti/envAuto"
   },
-  "scripts": {
-    "start": "./index.js"
+  "bin": {
+    "env-auto": "./index.js"
   },
   "keywords": [
     "env",
