@@ -1,16 +1,16 @@
 # Why this code?
 
-This is a very simple and small project create to save me some time when working on web servers hosted on Heroku.
+This is a very simple and small project that I created to save some time when working on web servers hosted on Heroku.
 
-I'm a big fan of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button) because it allows me to create a project deployable by anyone in my team with detailed instructions how to set up all the environment variables, thank to the `app.json` file.
+I'm a big fan of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button), because it allows me to create a project that's deployable by anyone on my team, with detailed instructions on how to set up all of the environment variables, thanks to the app.json file.
 
-Locally we do use Foreman to load the local environment variables from the `.env` file, and some times a project can end up with lots of variables.
+Locally, we use Foreman to load the local environment variables from the `.env` file, and projects can sometimes end up with lots of variables.
 
-With this tiny app, if you run it in a folder that has the `app.json` file, it will automatically create a `.env` for you. The only thing that you then need to do, is to set the right data to those variables.
+With this tiny app, running it in a folder that has the `app.json` file will automatically create a `.env` for you. The only thing you need to do is to set the right data to those variables.
 
 # Example
 
-This is an example app.json file that you might have in your project
+This is an example app.json file that you might have in your project.
 
 ```
 {
@@ -34,7 +34,7 @@ This is an example app.json file that you might have in your project
 	}
 }
 ```
-And this will be the output of such file
+This file will converted in this output.
 
 ```
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus
@@ -65,8 +65,7 @@ NPM_CONFIG_PRODUCTION=
 # est pretium nec.
 API_KEY=
 ```
-
-As you can see the description will be nicely formated, and the variable ready to be used.
+As you can see, the description will be nicely formatted; the variable will be ready to use.
 
 ## Installation
 
@@ -77,4 +76,4 @@ Install it as a global package, so you can use it through your system.
 ```
 # Favor
 
-If you find this project useful, don't forget to give it a star :)
+If you find this project useful, don't forget to give it a star! :)
