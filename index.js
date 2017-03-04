@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 let fs = require('fs');
+let crypto = require('crypto');
 
 //
 //	Open the app.json file.
@@ -28,14 +29,50 @@ fs.readFile('app.json', 'utf8', function(err, data) {
 	for(env_var in parsed)
 	{
 		//
-		//	1.	Chop the description in to a specific line length
+		//	1.	Save the default value in a clear variable
 		//
-		let comment = limit_80_array(parsed[env_var].description, "", 80);
+		let value = parsed[env_var].value;
 
 		//
-		//	2.	Combine the comment section with the environment variable
+		//	2.	Save the description in a clear variable
 		//
-		line += comment + "\n" + env_var + "=\n\n"
+		let description = parsed[env_var].description;
+
+		//
+		//	3.	Save the generator in a clear variable
+		//
+		let generator = parsed[env_var].generator;
+
+		//
+		//	4.	Chop the description in to a specific line length
+		//
+		let comment = limit_80_array(description, "", 80);
+
+		//
+		//	5.	Create the default empty env name
+		//
+		let env_name = env_var + "=";
+
+		//
+		//	6. 	If the file specifies a secret, we create one.
+		//
+		if(!value && generator === "secret")
+		{
+			env_name += crypto.randomBytes(16).toString('hex');
+		}
+
+		//
+		//	7.	If there is a default value for the env var, we append it
+		//
+		if(value && !generator)
+		{
+			env_name += value;
+		}
+
+		//
+		//	8.	Combine the comment section with the environment variable
+		//
+		line += comment + "\n" + env_name + "\n\n";
 	}
 
 	//
