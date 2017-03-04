@@ -54,7 +54,7 @@ NODE_ENV=
 # vestibulum diam non consequat. Phasellus aliquet neque in tellus iaculis
 # iaculis. Pellentesque vitae massa lacus. In id erat et est vestibulum mollis.
 # Vivamus scelerisque placerat urna nec ultrices. Nunc ac dictum tellus.
-NPM_CONFIG_PRODUCTION=
+NPM_CONFIG_PRODUCTION=true
 
 # Quisque justo odio, pretium a ante ac, mattis pharetra lectus. Cras erat
 # velit, tincidunt sit amet est aliquet, pellentesque commodo massa. Duis
@@ -63,7 +63,7 @@ NPM_CONFIG_PRODUCTION=
 # lorem in tempor. Nam ut dui purus. Phasellus ornare maximus magna ac
 # sollicitudin. Sed nec felis nibh. Nullam maximus pharetra dui, quis sodales
 # est pretium nec.
-API_KEY=
+API_KEY=5db712b385afeacaa1ab2bcaba271483
 ```
 As you can see, the description will be nicely formatted; the variable will be ready to use.
 
