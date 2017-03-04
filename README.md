@@ -74,9 +74,6 @@ Install it as a global package, so you can use it through your system.
 ```bash
     $ npm install env-auto -g
 ```
-# Side Window Css Scroll
-
-🐠 A custom div scroll with custom sidebar
 
 # Other
 
