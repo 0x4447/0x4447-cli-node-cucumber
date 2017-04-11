@@ -1,16 +1,18 @@
-# Why this code?
+# env-auto
 
 This is a very simple and small project that I created to save some time when working on web servers hosted on Heroku.
 
-I'm a big fan of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button), because it allows me to create a project that's deployable by anyone on my team, with detailed instructions on how to set up all of the environment variables, thanks to the `app.json` file.
+I'm a big fan of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button), because it allows me to create a project that's deployable by anyone, with detailed instructions on how to set up all of the environment variables, thanks to the `app.json` file.
 
-Locally, we use Foreman to load the local environment variables from the `.env` file, and projects can sometimes end up with lots of variables.
+Locally, I use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file, and since projects can sometimes end up with lots of env variables.
 
-With this tiny app, running it in a folder that has the `app.json` file will automatically create a `.env` for you. The only thing you need to do is to set the right data to those variables.
+I created this tiny app to automatically generate the `.env` file while making sure the file won't excede the 80 char ruler mark. 
+
+If your `app.json` file has set default values, env-auto will automatically populate the vriables. Anything else will require you to fill in the data.
 
 # Example
 
-This is an example app.json file that you might have in your project.
+This is an example `app.json` file that you might have in your project.
 
 ```
 {
@@ -34,7 +36,7 @@ This is an example app.json file that you might have in your project.
 	}
 }
 ```
-The output of the file will look like this:
+If you were to run `env-auto`, this is the output that you would see:
 
 ```
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus
@@ -65,11 +67,11 @@ NPM_CONFIG_PRODUCTION=true
 # est pretium nec.
 API_KEY=5db712b385afeacaa1ab2bcaba271483
 ```
-As you can see, the description will be nicely formatted, some variables will already filled based on the options set in the `app.json` file, then the rest is up to you.
+As you can see, the description will be nicely formatted, the varaiables with thefault values will be filled automatcially, and  the rest is up to you.
 
 ## Installation
 
-Install it as a global package, so you can use it through your system.
+You have to install `env-auto` as a global package with the following command
 
 ```bash
     $ npm install env-auto -g
