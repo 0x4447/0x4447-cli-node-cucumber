@@ -1,4 +1,4 @@
-# env-auto
+# 🚗 env-auto
 
 This is a very simple and small project that I created to save some time when working on web servers hosted on Heroku.
 
