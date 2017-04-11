@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidgatti/envAuto"
+    "url": "https://github.com/davidgatti/env-auto"
   },
   "bin": {
     "env-auto": "./index.js"
