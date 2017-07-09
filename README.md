@@ -1,3 +1,10 @@
+[![downloads][downloads-badge]][npm-stat]
+
+[downloads-badge]: https://img.shields.io/npm/dm/env-auto.svg?style=flat-square
+[npm-stat]: http://npm-stat.com/charts.html?package=env-auto&from=2016-04-01
+
+---
+
 # 🚗 env-auto
 
 This is a very simple and small project that I created to save some time when working on web servers hosted on Heroku.
