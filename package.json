@@ -1,7 +1,7 @@
 {
   "name": "env-auto",
   "version": "1.4.4",
-  "description": "convert app.json in to .env",
+  "description": "🚗 convert app.json in to .env",
   "main": "index.js",
   "repository": {
     "type": "git",
