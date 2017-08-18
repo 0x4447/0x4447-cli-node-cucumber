@@ -1,3 +1,10 @@
+[![downloads][downloads-badge]][npm-stat]
+
+[downloads-badge]: https://img.shields.io/npm/dm/env-auto.svg?style=flat-square
+[npm-stat]: http://npm-stat.com/charts.html?package=env-auto&from=2016-04-01
+
+---
+
 # 🚗 env-auto
 
 This is a very simple and small project that I created to save some time when working on web servers hosted on Heroku.
@@ -6,7 +13,7 @@ I'm a big fan of the [Heroku Button](https://devcenter.heroku.com/articles/herok
 
 Locally, I use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file, and since projects can sometimes end up with lots of env variables.
 
-I created this tiny app to automatically generate the `.env` file while making sure the file won't excede the 80 char ruler mark. 
+I created this tiny app to automatically generate the `.env` file while making sure the file won't excede the 80 char ruler mark.
 
 If your `app.json` file has set default values, env-auto will automatically populate the vriables. Anything else will require you to fill in the data.
 
@@ -79,7 +86,13 @@ You have to install `env-auto` as a global package with the following command
 
 # The End
 
-If you've enjoyed this article/project, please consider giving it a 🌟. Also check out my [GitHub account](https://github.com/davidgatti), where I have other articles and apps that you might find interesting.
+If you've enjoyed this article/project, please consider giving it a 🌟 or donate.
+
+- [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/gattidavid/25)
+- [![Star on GitHub](https://img.shields.io/github/stars/davidgatti/env-auto.svg?style=social)](https://github.com/davidgatti/env-auto/stargazers)
+- [![Watch on GitHub](https://img.shields.io/github/watchers/davidgatti/env-auto.svg?style=social)](https://github.com/davidgatti/env-auto/watchers)
+
+Also check out my [GitHub account](https://github.com/davidgatti), where I have other articles and apps that you might find interesting.
 
 ## Where to follow
 
