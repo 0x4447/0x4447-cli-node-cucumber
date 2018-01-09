@@ -1,21 +1,14 @@
-[![downloads][downloads-badge]][npm-stat]
+# 🥒 Cucumber
 
-[downloads-badge]: https://img.shields.io/npm/dm/env-auto.svg?style=flat-square
-[npm-stat]: http://npm-stat.com/charts.html?package=env-auto&from=2016-04-01
+This is a very simple and small project that we created to save some time when working on web servers hosted on Heroku.
 
----
+We are big fans of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button). It allows us to create a project that's deployable by anyone, with detailed instructions on how to set up all of the environment variables, thanks to the `app.json` file.
 
-# 🚗 env-auto
+Locally, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file, and since projects can sometimes end up with lots of env variables.
 
-This is a very simple and small project that I created to save some time when working on web servers hosted on Heroku.
+We created this tiny app to automatically generate the `.env` file while making sure the file won't excede the 80 char ruler mark.
 
-I'm a big fan of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button), because it allows me to create a project that's deployable by anyone, with detailed instructions on how to set up all of the environment variables, thanks to the `app.json` file.
-
-Locally, I use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file, and since projects can sometimes end up with lots of env variables.
-
-I created this tiny app to automatically generate the `.env` file while making sure the file won't excede the 80 char ruler mark.
-
-If your `app.json` file has set default values, env-auto will automatically populate the vriables. Anything else will require you to fill in the data.
+If your `app.json` file has set default values, Cucumber will automatically populate the vriables. Anything else will require your action to fill in the data.
 
 # Example
 
@@ -78,15 +71,15 @@ As you can see, the description will be nicely formatted, the varaiables with th
 
 ## Installation
 
-You have to install `env-auto` as a global package with the following command
+You have to install `Cucumber` as a global package with the following command
 
 ```bash
-    $ npm install env-auto -g
+    $ npm install cucumber -g
 ```
 
 # The End
 
-If you enjoyed this article/project, please consider giving it a 🌟. And check out our [0x4447 GitHub account](https://github.com/0x4447), where we have additional articles and tools that you might find interesting.
+If you enjoyed this project, please consider giving it a 🌟. And check out our [0x4447 GitHub account](https://github.com/0x4447), where we have additional articles and tools that you might find interesting.
 
 # For Hire 👨‍💻
 
