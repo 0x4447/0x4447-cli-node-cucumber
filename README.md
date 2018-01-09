@@ -76,6 +76,9 @@ You have to install `Cucumber` as a global package with the following command
 ```bash
     $ npm install cucumber -g
 ```
+# Why This Name?
+
+Why not? We had to call it something. And once you see it, you're not going to forget it. 😃
 
 # The End
 
