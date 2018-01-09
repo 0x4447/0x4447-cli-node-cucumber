@@ -1,25 +1,26 @@
 {
-  "name": "env-auto",
+  "name": "cucumber",
   "version": "1.4.5",
-  "description": "🚗 convert app.json in to .env",
+  "description": "🥒 convert app.json in to .env ",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidgatti/env-auto"
+    "url": "https://github.com/0x4447/0x4447-node-cli-cucumber"
   },
   "bin": {
-    "env-auto": "./index.js"
+    "cucumber": "./index.js"
   },
   "keywords": [
     "env",
     "heroku",
     "heroku button",
-    "foreman"
+    "foreman",
+    "0x4447"
   ],
   "author": {
-    "name": "David Gatti",
-    "email": "npm@gatti.pl",
-    "url": "https://github.com/davidgatti"
+    "name": "0x4447",
+    "email": "hello@0x4447.com",
+    "url": "https://0x4447.com"
   },
   "license": "MIT"
 }
