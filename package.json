@@ -1,8 +1,11 @@
 {
-  "name": "cucumber",
-  "version": "1.4.5",
+  "name": "@0x4447/cucumber",
+  "version": "1.4.6",
   "description": "🥒 convert app.json in to .env ",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/0x4447/0x4447-node-cli-cucumber"
@@ -22,5 +25,8 @@
     "email": "hello@0x4447.com",
     "url": "https://0x4447.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "4.1.0"
+  }
 }

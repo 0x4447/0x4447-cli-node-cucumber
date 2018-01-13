@@ -74,7 +74,7 @@ As you can see, the description will be nicely formatted, the varaiables with th
 You have to install `Cucumber` as a global package with the following command
 
 ```bash
-    $ npm install cucumber -g
+    $ sudo npm install -g @0x4447/cucumber
 ```
 # Why This Name?
 
