@@ -16,7 +16,7 @@ If your `app.json` file has set default values, Cucumber will automatically popu
 sudo npm install -g @0x4447/cucumber
 ```
 
-# Example
+# Usage
 
 This is an example `app.json` file that you might have in your project.
 
@@ -75,13 +75,6 @@ API_KEY=5db712b385afeacaa1ab2bcaba271483
 ```
 As you can see, the description will be nicely formatted, the varaiables with thefault values will be filled automatcially, and  the rest is up to you.
 
-## Installation
-
-You have to install `Cucumber` as a global package with the following command
-
-```bash
-    $ sudo npm install -g @0x4447/cucumber
-```
 # Why This Name?
 
 Why not? We had to call it something. And once you see it, you're not going to forget it. 😃
