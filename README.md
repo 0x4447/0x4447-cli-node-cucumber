@@ -10,6 +10,12 @@ We created this tiny app to automatically generate the `.env` file while making 
 
 If your `app.json` file has set default values, Cucumber will automatically populate the vriables. Anything else will require your action to fill in the data.
 
+# How to Install
+
+```
+sudo npm install -g @0x4447/cucumber
+```
+
 # Example
 
 This is an example `app.json` file that you might have in your project.
