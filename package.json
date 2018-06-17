@@ -1,9 +1,14 @@
 {
   "name": "@0x4447/cucumber",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "🥒 convert app.json in to .env ",
+  "homepage": "https://0x4447.com/toolbox",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "build": "npm pack && npm install -g 0x4447-cucumber-* && rm 0x4447-cucumber-*",
     "test": "mocha"
   },
   "repository": {
@@ -13,19 +18,23 @@
   "bin": {
     "cucumber": "./index.js"
   },
+  "author": {
+    "name": "0x4447",
+    "email": "hello@0x4447.email",
+    "url": "https://0x4447.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0x4447/0x4447-cli-node-cucumber/issues"
+  },
   "keywords": [
+    "0x4447"
+    "cli",
     "env",
     "heroku",
     "heroku button",
     "foreman",
-    "0x4447"
   ],
-  "author": {
-    "name": "0x4447",
-    "email": "hello@0x4447.com",
-    "url": "https://0x4447.com"
-  },
-  "license": "MIT",
   "dependencies": {
     "mocha": "4.1.0"
   }
