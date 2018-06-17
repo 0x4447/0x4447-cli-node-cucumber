@@ -28,12 +28,12 @@
     "url": "https://github.com/0x4447/0x4447-cli-node-cucumber/issues"
   },
   "keywords": [
-    "0x4447"
+    "0x4447",
     "cli",
     "env",
     "heroku",
     "heroku button",
-    "foreman",
+    "foreman"
   ],
   "dependencies": {
     "mocha": "4.1.0"
