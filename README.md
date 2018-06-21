@@ -6,9 +6,9 @@ We are big fans of the [Heroku Button](https://devcenter.heroku.com/articles/her
 
 Locally, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file, and since projects can sometimes end up with lots of env variables.
 
-We created this tiny app to automatically generate the `.env` file while making sure the file won't excede the 80 char ruler mark.
+We created this tiny app to automatically generate the `.env` file while making sure the file won't exceed the 80 char ruler mark.
 
-If your `app.json` file has set default values, Cucumber will automatically populate the vriables. Anything else will require your action to fill in the data.
+If your `app.json` file has set default values, Cucumber will automatically populate the variables. Anything else will require your action to fill in the data.
 
 # How to Install
 
@@ -16,7 +16,13 @@ If your `app.json` file has set default values, Cucumber will automatically popu
 sudo npm install -g @0x4447/cucumber
 ```
 
-# Usage
+# How to Use
+
+```
+cucumber
+```
+
+# What to expect
 
 This is an example `app.json` file that you might have in your project.
 
@@ -42,7 +48,7 @@ This is an example `app.json` file that you might have in your project.
 	}
 }
 ```
-If you were to run `env-auto`, this is the output that you would see:
+This is the output that you will get.
 
 ```
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus
@@ -73,7 +79,7 @@ NPM_CONFIG_PRODUCTION=true
 # est pretium nec.
 API_KEY=5db712b385afeacaa1ab2bcaba271483
 ```
-As you can see, the description will be nicely formatted, the varaiables with thefault values will be filled automatcially, and  the rest is up to you.
+As you can see, the description will be nicely formatted, the variables with default values will be filled automatically, and  the rest is up to you.
 
 # Why This Name?
 
@@ -85,4 +91,4 @@ If you enjoyed this article/project, please consider giving it a 🌟. And check
 
 # For Hire 👨‍💻 👩‍💻
 
-If you'd like us to help you with something, please feel free to say hello@0x4447.com, and share what's on your mind. We'll take a look, and try our best to help you. Or visit our website at: [0x4447.com](https://0x4447.com).
+If you'd like us to help you with something, please feel free to say hello@0x4447.email, and share what's on your mind. We'll take a look, and try our best to help you. Or visit our website at: [0x4447.com](https://0x4447.com).
