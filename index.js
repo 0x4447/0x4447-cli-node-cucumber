@@ -1,7 +1,50 @@
 #!/usr/bin/env node
 
 let fs = require('fs');
+let npm = require('./package.json');
 let crypto = require('crypto');
+let program = require('commander');
+
+//   _____   ______   _______   _______   _____   _   _    _____    _____
+//  / ____| |  ____| |__   __| |__   __| |_   _| | \ | |  / ____|  / ____|
+// | (___   | |__       | |       | |      | |   |  \| | | |  __  | (___
+//  \___ \  |  __|      | |       | |      | |   | . ` | | | |_ |  \___ \
+//  ____) | | |____     | |       | |     _| |_  | |\  | | |__| |  ____) |
+// |_____/  |______|    |_|       |_|    |_____| |_| \_|  \_____| |_____/
+//
+
+//
+//	The CLI options for this app.
+//
+program
+	.version(npm.version)
+	.parse(process.argv);
+
+//
+//	React when the user needs help
+//
+program.on('--help', function() {
+
+	//
+	//	Just add an empty line at the end of the help to make the text more
+	//	clear to the user
+	//
+	console.log("");
+
+});
+
+//
+//	Pass the user input to the commander module
+//
+program.parse(process.argv);
+
+//	 __  __              _____   _   _
+//	|  \/  |     /\     |_   _| | \ | |
+//	| \  / |    /  \      | |   |  \| |
+//	| |\/| |   / /\ \     | |   | . ` |
+//	| |  | |  / ____ \   _| |_  | |\  |
+//	|_|  |_| /_/    \_\ |_____| |_| \_|
+//
 
 //
 //	Open the app.json file.
@@ -123,7 +166,8 @@ function limit_80_array(string, fragment, length)
 	let array_copy = array.slice();
 
 	//
-	//	3.	A temp Array that is going to hold one line of text at each iteration
+	//	3.	A temp Array that is going to hold one line of text at each
+	//		iteration
 	//
 	let tmp = [];
 
