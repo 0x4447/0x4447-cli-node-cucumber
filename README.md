@@ -22,6 +22,12 @@ If your `app.json` file has set default values, Cucumber will automatically popu
 ] cucumber
 ```
 
+# Where to get Help
+
+```
+] cucumber -h
+```
+
 # What to Expect
 
 This is an example `app.json` file that you might have in your project.
