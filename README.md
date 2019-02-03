@@ -1,14 +1,14 @@
 # 🥒 Cucumber
 
-This small project that we created to save time when working on web servers hosted on Heroku.
+We created this small project to save time when working on web servers hosted on Heroku.
 
-We are big fans of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button). It allows us to create a project that can be deployable by anyone, with detailed instructions on how to set up all of the environment variables, thanks to the `app.json` file.
+We're big fans of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button). Thanks to the `app.json` file, we're now able to create projects anyone can deploy, along with detailed instructions on how to set up all environment variables.
 
-Locally, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file, and since projects can sometimes end up with dozens of environment variables.
+Locally, since projects sometimes end up with dozens of environment variables, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file.
 
-We created this tiny app to automatically generate the `.env` file from the `app.json` one. While making sure the file won't exceed the 80 char ruler mark.
+We created this tiny app to automatically generate the `.env` file from the `app.json` file. At the same time, we ensured that the file wouldn't exceed the 80 char ruler mark.
 
-In addition: if your `app.json` file uses default values, Cucumber will automatically populate the variables with the right set off auto generated data. Anything else will require you to add the information manually.
+In addition, if your `app.json` file uses default values, Cucumber automatically populates the variables with the right set of auto-generated data. Anything else requires that you manually add the information.
 
 # How to Install
 
@@ -30,7 +30,7 @@ In addition: if your `app.json` file uses default values, Cucumber will automati
 
 # What to Expect
 
-This is an example `app.json` file that you might have in your project.
+This is a sample `app.json` file that you could include in your project:
 
 ```
 {
@@ -54,7 +54,7 @@ This is an example `app.json` file that you might have in your project.
 	}
 }
 ```
-This is the output that you will get.
+Here's your result:
 
 ```
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus
@@ -85,7 +85,7 @@ NPM_CONFIG_PRODUCTION=true
 # est pretium nec.
 API_KEY=5db712b385afeacaa1ab2bcaba271483
 ```
-As you can see, the description will be nicely formatted, the variables with default values will be filled automatically, and  the rest is up to you.
+As you can see, the description is nicely formatted, the variables with default values are filled automatically, and  the rest is up to you.
 
 # The End
 
