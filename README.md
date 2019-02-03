@@ -6,7 +6,7 @@ We're big fans of the [Heroku Button](https://devcenter.heroku.com/articles/hero
 
 Locally, since projects sometimes end up with dozens of environment variables, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file.
 
-We created this tiny app to automatically generate the `.env` file from the `app.json` file. At the same time, we ensured that the file wouldn't exceed the 80 char ruler mark.
+We created this tiny app to automatically generate the `.env` file from the `app.json` file. At the same time, we ensured that the file wouldn't exceed the 80-character ruler mark.
 
 In addition, if your `app.json` file uses default values, Cucumber automatically populates the variables with the right set of auto-generated data. Anything else requires that you manually add the information.
 
@@ -85,7 +85,7 @@ NPM_CONFIG_PRODUCTION=true
 # est pretium nec.
 API_KEY=5db712b385afeacaa1ab2bcaba271483
 ```
-As you can see, the description is nicely formatted, the variables with default values are filled automatically, and  the rest is up to you.
+As you can see, the description is nicely formatted, the variables with default values are filled automatically, and the rest is up to you.
 
 # The End
 
