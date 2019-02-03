@@ -10,25 +10,25 @@ We created this tiny app to automatically generate the `.env` file from the `app
 
 In addition, if your `app.json` file uses default values, Cucumber automatically populates the variables with the right set of auto-generated data. Anything else requires that you manually add the information.
 
-# How to Install
+# How to install
 
 ```
 ] sudo npm install -g @0x4447/cucumber
 ```
 
-# How to Use
+# How to use
 
 ```
 ] cucumber
 ```
 
-# Where to get Help
+# Where to get help
 
 ```
 ] cucumber -h
 ```
 
-# What to Expect
+# What to expect
 
 This is a sample `app.json` file that you could include in your project:
 
