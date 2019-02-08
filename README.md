@@ -2,11 +2,11 @@
 
 We created this small project to save time when working on web servers hosted on Heroku.
 
-We're big fans of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button). Thanks to the `app.json` file, we're now able to create projects anyone can deploy, along with detailed instructions on how to set up all environment variables.
+We're big fans of the [Heroku Button](https://devcenter.heroku.com/articles/heroku-button). Thanks to the `app.json` file, we're able to create projects anyone can deploy, along with detailed instructions on how to set up all environment variables.
 
-Locally, since projects sometimes end up with dozens of environment variables, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file.
+Locally, since projects sometimes end up with dozens of environment variables, we use [foreman](https://www.npmjs.com/package/foreman) to load the local environment variables from the `.env` file. But we are still stuck with the problem of manually create the `.env` file every time we pull the project in a clean location.
 
-We created this tiny app to automatically generate the `.env` file from the `app.json` file. At the same time, we ensured that the file wouldn't exceed the 80-character ruler mark.
+To speed up the initial setup process, we created this tiny app to automatically generate the `.env` file from the `app.json` file. At the same time, we ensured that the file wouldn't exceed the 80-character ruler mark.
 
 In addition, if your `app.json` file uses default values, Cucumber automatically populates the variables with the right set of auto-generated data. Anything else requires that you manually add the information.
 
