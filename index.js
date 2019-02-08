@@ -17,7 +17,8 @@ let program = require('commander');
 //	The CLI options for this app.
 //
 program
-	.version(npm.version);
+	.version(npm.version)
+	.option('-s, --source [type]', 	'path to the source folder');
 
 //
 //	React when the user needs help
@@ -46,9 +47,14 @@ program.parse(process.argv);
 //
 
 //
+//	Set the work location of the CLI.
+//
+let location = process.cwd() + "/" + program.source;
+
+//
 //	Open the app.json file.
 //
-fs.readFile('app.json', 'utf8', function(err, data) {
+fs.readFile(location + '/app.json', 'utf8', function(err, data) {
 
 	//
 	//	1.	Display Error if any
@@ -125,7 +131,7 @@ fs.readFile('app.json', 'utf8', function(err, data) {
 	//
 	//	6.	Save the data in to the .env file.
 	//
-	fs.writeFile('.env', file, (err) => {
+	fs.writeFile(location + '/.env', file, (err) => {
 
 		//
 		//	1.	Display Error if any
