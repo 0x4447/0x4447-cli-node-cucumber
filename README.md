@@ -19,7 +19,7 @@ In addition, if your `app.json` file uses default values, Cucumber automatically
 # How to use
 
 ```
-] cucumber
+] cucumber -s PATH_TO_FOLDER
 ```
 
 # Where to get help

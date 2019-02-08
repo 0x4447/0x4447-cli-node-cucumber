@@ -1,6 +1,6 @@
 {
   "name": "@0x4447/cucumber",
-  "version": "1.4.19",
+  "version": "1.4.20",
   "description": "🥒 convert app.json in to .env ",
   "homepage": "https://0x4447.com/toolbox",
   "main": "index.js",
